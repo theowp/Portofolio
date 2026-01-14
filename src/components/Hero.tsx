@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { ArrowDown, Github, Linkedin, Mail, MapPin, Calendar, GraduationCap } from 'lucide-react';
+import { ArrowDown, Linkedin, Mail, MapPin, Calendar, GraduationCap } from 'lucide-react';
 import { personalInfo, socialLinks } from '@/lib/data';
 
 const containerVariants = {
@@ -22,7 +22,7 @@ const itemVariants = {
     y: 0,
     transition: {
       duration: 0.8,
-      ease: [0.25, 0.4, 0.25, 1]
+      ease: "easeOut" as const
     }
   }
 };
@@ -32,7 +32,7 @@ const floatingAnimation = {
   transition: {
     duration: 4,
     repeat: Infinity,
-    ease: "easeInOut"
+    ease: "easeInOut" as const
   }
 };
 
@@ -173,7 +173,6 @@ export function Hero() {
           className="flex items-center justify-center gap-6"
         >
           {[
-            { icon: Github, href: socialLinks.github, label: 'GitHub' },
             { icon: Linkedin, href: socialLinks.linkedin, label: 'LinkedIn' },
             { icon: Mail, href: `mailto:${socialLinks.email}`, label: 'Email' }
           ].map(({ icon: Icon, href, label }) => (
