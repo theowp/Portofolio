@@ -17,7 +17,7 @@ const pageVariants = {
     y: 0,
     transition: {
       duration: 0.5,
-      ease: "easeOut",
+      ease: "easeOut" as const,
       staggerChildren: 0.1,
     },
   },
@@ -52,7 +52,7 @@ export const sectionVariants = {
     y: 0,
     transition: {
       duration: 0.6,
-      ease: "easeOut",
+      ease: "easeOut" as const,
     },
   },
 };

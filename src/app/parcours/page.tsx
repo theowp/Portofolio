@@ -13,7 +13,7 @@ function ProgressBar({ progress, color, delay }: { progress: number; color: stri
       <motion.div
         initial={{ width: 0 }}
         animate={{ width: `${progress}%` }}
-        transition={{ delay, duration: 1, ease: "easeOut" }}
+        transition={{ delay, duration: 1, ease: "easeOut" as const }}
         className="h-full rounded-full"
         style={{ backgroundColor: color }}
       />
