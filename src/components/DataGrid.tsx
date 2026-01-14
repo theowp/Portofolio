@@ -13,7 +13,7 @@ interface DataPoint {
 export function DataGrid() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const pointsRef = useRef<DataPoint[]>([]);
-  const animationRef = useRef<number>();
+  const animationRef = useRef<number>(0);
 
   useEffect(() => {
     const canvas = canvasRef.current;
